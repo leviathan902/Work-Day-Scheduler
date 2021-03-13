@@ -11,3 +11,6 @@ I wanted to create a daily planner, in order to better manage my time at work.
 
 ## Screenshot ##
 ![Screenshot 1](https://github.com/leviathan902/Work-Day-Scheduler/blob/main/assets/Screenshot.PNG?raw=true)
+
+## Deployed Application ##
+https://leviathan902.github.io/Work-Day-Scheduler/
