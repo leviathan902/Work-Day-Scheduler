@@ -20,7 +20,6 @@ setInterval(displayTime, 1000);
 // Variable to check/store the current hour.
 var now = new Date().getHours();
 
-// 
 function timeBlockColorCode() {
   // If the current hour is greater than 9AM...
   if (now > 9) {
@@ -104,39 +103,35 @@ function timeBlockColorCode() {
 
 timeBlockColorCode();
 
-// function nine00() {
-//   var textEl = localStorage.getItem($"text900")
-// }
-
-
-
-// function nine00() {
-// var inputText = document.querySelector("#text900");
-// var outputText = document.querySelector("#text900");
-// var saveBtnEl = document.querySelector("#btn900");
-
-// outputText.textContent = localStorage.getItem("content");
-// inputText.value = localStorage.getItem("content");
-
-// saveBtnEl.addEventListener("click", output900);
-
-// function output900() {
-//   localStorage.setItem("content", inputText.value);
-//   outputText.textContent = inputText.value;
-// }
-
-// }
-
-
-// saveBtnEl.on("click", function () {
-//   localStorage.setItem("content", inputText.value);
-//   outputText.textContent = inputText.value;
-// })
-
-
 // WHEN I click into a timeblock
 // THEN I can enter an event
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events 
+
+saveBtnEl = $(".saveBtn");
+
+// When the save button is clicked...
+saveBtnEl.on("click", function () {
+  console.log("clicky click");
+  var btnID = $(this).attr("id");
+  var schedule = $(this).prev().val();
+  console.log(btnID);
+  localStorage.setItem(btnID, schedule);
+})
+
+// Displaying localstorage items from text area.
+var displaySchedule = () => {
+  $("#text900").val(localStorage.getItem('btn900'));
+  $("#text1000").val(localStorage.getItem('btn1000'));
+  $("#text1100").val(localStorage.getItem('btn1100'));
+  $("#text1200").val(localStorage.getItem('btn1200'));
+  $("#text1300").val(localStorage.getItem('btn1300'));
+  $("#text1400").val(localStorage.getItem('btn1400'));
+  $("#text1500").val(localStorage.getItem('btn1500'));
+  $("#text1600").val(localStorage.getItem('btn1600'));
+  $("#text1700").val(localStorage.getItem('btn1700'));
+}
+
+displaySchedule();
