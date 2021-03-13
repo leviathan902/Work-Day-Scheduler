@@ -21,7 +21,7 @@ setInterval(displayTime, 1000);
 var now = new Date().getHours();
 
 // 
-function colorCode() {
+function timeBlockColorCode() {
   // If the current hour is greater than 9AM...
   if (now > 9) {
     // Add class "past"(Gray background color) to textarea...
@@ -102,24 +102,30 @@ function colorCode() {
 
 }
 
-colorCode();
+timeBlockColorCode();
 
-function nine00() {
-var inputText = document.querySelector("#text900");
-var outputText = document.querySelector("text900");
-var saveBtnEl = document.querySelector("#btn900");
+// function nine00() {
+//   var textEl = localStorage.getItem($"text900")
+// }
 
-outputText.textContent = localStorage.getItem("content");
-inputText.value = localStorage.getItem("content");
 
-saveBtnEl.addEventListener("click", output900);
 
-function output900() {
-  localStorage.setItem("content", inputText.value);
-  outputText.textContent = inputText.value;
-}
+// function nine00() {
+// var inputText = document.querySelector("#text900");
+// var outputText = document.querySelector("#text900");
+// var saveBtnEl = document.querySelector("#btn900");
 
-}
+// outputText.textContent = localStorage.getItem("content");
+// inputText.value = localStorage.getItem("content");
+
+// saveBtnEl.addEventListener("click", output900);
+
+// function output900() {
+//   localStorage.setItem("content", inputText.value);
+//   outputText.textContent = inputText.value;
+// }
+
+// }
 
 
 // saveBtnEl.on("click", function () {
