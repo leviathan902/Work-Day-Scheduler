@@ -13,27 +13,99 @@ function displayTime() {
 
 setInterval(displayTime, 1000);
 
+// WHEN I scroll down
+// THEN I am presented with timeblocks for standard business hours
+// WHEN I view the timeblocks for that day
+// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 
+// Variable to check/store the current hour.
 var now = new Date().getHours();
 
+// 
 function colorCode() {
+  // If the current hour is greater than 9AM...
   if (now > 9) {
-    $("#text9").addClass("past");
+    // Add class "past"(Gray background color) to textarea...
+    $("#text900").addClass("past");
+    // Otherwise, if current hour is greater than 9AM, and also less than 10AM...
   } else if (now >= 9 && now < 10) {
-    $("#text9").addClass("present");
+    // Add class "present"(Red background color) to textarea...
+    $("#text900").addClass("present");
+    // Otherwise, if current hour is less than 9AM...
   } else if (now < 9) {
-    $("#text9").addClass("future");
+    // Add class "future"(Green background color) to textarea...
+    $("#text900").addClass("future");
   }
+
+  if (now > 10) {
+    $("#text1000").addClass("past");
+  } else if (now >= 10 && now < 11) {
+    $("#text1000").addClass("present");
+  } else if (now < 10) {
+    $("#text1000").addClass("future");
+  }
+
+  if (now > 11) {
+    $("#text1100").addClass("past");
+  } else if (now >= 11 && now < 12) {
+    $("#text1100").addClass("present");
+  } else if (now < 11) {
+    $("#text1100").addClass("future");
+  }
+
+  if (now > 12) {
+    $("#text1200").addClass("past");
+  } else if (now >= 12 && now < 13) {
+    $("#text1200").addClass("present");
+  } else if (now < 12) {
+    $("#text1200").addClass("future");
+  }
+
+  if (now > 13) {
+    $("#text1300").addClass("past");
+  } else if (now >= 13 && now < 14) {
+    $("#text1300").addClass("present");
+  } else if (now < 13) {
+    $("#text1300").addClass("future");
+  }
+
+  if (now > 14) {
+    $("#text1400").addClass("past");
+  } else if (now >= 14 && now < 15) {
+    $("#text1400").addClass("present");
+  } else if (now < 14) {
+    $("#text1400").addClass("future");
+  }
+
+  if (now > 15) {
+    $("#text1500").addClass("past");
+  } else if (now >= 15 && now < 16) {
+    $("#text1500").addClass("present");
+  } else if (now < 15) {
+    $("#text1500").addClass("future");
+  }
+
+  if (now > 16) {
+    $("#text1600").addClass("past");
+  } else if (now >= 16 && now < 17) {
+    $("#text1600").addClass("present");
+  } else if (now < 16) {
+    $("#text1600").addClass("future");
+  }
+
+  if (now > 17) {
+    $("#text1700").addClass("past");
+  } else if (now >= 17 && now < 18) {
+    $("#text1700").addClass("present");
+  } else if (now < 17) {
+    $("#text1700").addClass("future");
+  }
+
 }
 
 colorCode();
 
 
-// WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-// Update every hours. If in past, color is gray. If current, color is red, if future, color is green.
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
