@@ -3,7 +3,6 @@
 // THEN the current day is displayed at the top of the calendar
 // save reference to important DOM elements
 var dateDisplayEl = $('#dateDisplay');
-var saveBtnEl = $('saveBtn');
 
 // handle displaying the time
 function displayTime() {
@@ -105,6 +104,28 @@ function colorCode() {
 
 colorCode();
 
+function nine00() {
+var inputText = document.querySelector("#text900");
+var outputText = document.querySelector("text900");
+var saveBtnEl = document.querySelector("#btn900");
+
+outputText.textContent = localStorage.getItem("content");
+inputText.value = localStorage.getItem("content");
+
+saveBtnEl.addEventListener("click", output900);
+
+function output900() {
+  localStorage.setItem("content", inputText.value);
+  outputText.textContent = inputText.value;
+}
+
+}
+
+
+// saveBtnEl.on("click", function () {
+//   localStorage.setItem("content", inputText.value);
+//   outputText.textContent = inputText.value;
+// })
 
 
 // WHEN I click into a timeblock
