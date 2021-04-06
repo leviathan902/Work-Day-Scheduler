@@ -14,3 +14,13 @@ I wanted to create a daily planner, in order to better manage my time at work.
 
 ## Deployed Application ##
 https://leviathan902.github.io/Work-Day-Scheduler/
+
+## Credits
+
+Assignment is part of the SMU Coding Boot Camp
+
+## License
+
+Copyright (c) 2021 Levi Hickman
+
+Covered by the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
